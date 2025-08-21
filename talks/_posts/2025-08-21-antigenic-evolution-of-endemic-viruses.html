@@ -1,0 +1,207 @@
+---
+layout: talk_reveal5
+title: Antigenic evolution of endemic human respiratory viruses
+author: Trevor Bedford
+draft: true
+---
+
+<!-- 7 min talk length -->
+
+<!-- Outline
+1. Open with genetic / antigenic diversity across respiratory viruses
+2. SARS-CoV-2 as brief case study in antigenic evolution
+3. Katie's work on antigenic evolution across viruses, including rhinoviruses
+4. Note core challenges of:
+  (1) keeping up with evolution in strain selection
+	(2) dealing with original antigenic sin -->
+
+<!--             Blue     Yellow   Purple   Red     -->
+<!-- Color ramp: #4C91C1, #CFB642, #7F62A4, #E04328 -->
+
+<section data-transition="fade" data-background="#000">
+	<h2 class="title">{{ page.title }}</h2>
+	<br>&nbsp;<br>
+	<h4 class="title">Trevor Bedford</h4>
+	<p class="title">
+	Fred Hutchinson Cancer Center / Howard Hughes Medical Institute
+	<br>
+	{{ page.date | date: "%-d %b %Y" }}
+</section>
+
+<section class="left-align">
+	<h3>Circulating serological diversity of human respiratory viruses</h3>
+	<p>
+		This is necessarily a bit squishy, here aiming to split things like B/Vic
+		and B/Yam into separate groups even if there's some cross-neutralization.
+		This gives <b>~200</b> antigenically distinct viruses to tackle.
+	</p>
+	<br>
+	<div style="float: left; width: 49%">
+		<dl>
+			<dt>~160</dt>	<dd>rhinoviruses <i class="smaller">(genotypes)</i></dd>
+			<dt>9</dt>		<dd>seasonal influenza viruses <i class="smaller">(including flu C)</i></dd>
+			<dt>6</dt>		<dd>seasonal CoV <i class="smaller">(splitting OC43 and HKU1)</i></dd>
+			<dt>2</dt>		<dd>respiratory syncytial viruses</dd>
+			<dt>1</dt>		<dd>bocavirus</dd>
+			<dt>1</dt>		<dd>mumps virus</dd>
+			<dt>1</dt>		<dd>SARS-CoV-2</dd>
+		</dl>
+	</div>
+	<div style="float: right; width: 49%">
+		<dl>
+			<dt>~10</dt>	<dd>adenoviruses <i class="smaller">(respiratory only)</i></dd>
+			<dt>~7</dt>		<dd>non-rhino enteroviruses <i class="smaller">(respiratory only)</i></dd>
+			<dt>5</dt>		<dd>parainfluenza viruses <i class="smaller">(splitting HPIV-4)</i></dd>
+			<dt>2</dt>		<dd>metapneumoviruses</dd>
+			<dt>1</dt>		<dd>measles virus</dd>
+			<dt>1</dt>		<dd>rubella virus</dd>
+		</dl>
+	</div>
+</section>
+
+<section>
+	<h3>
+		Selection for variants that escape population immunity drives antigenic drift
+	</h3>
+</section>
+
+<section>
+	<h3>Genetic relationships of globally sampled SARS-CoV-2 to present</h3>
+	<img class="stretch" data-src="/images/talks/ncov_variants_tree_unrooted_2025_08_05.png">
+	<template class="slide-citation">
+		<a href="https://nextstrain.org/ncov/gisaid/global/all-time@2025-08-05?l=unrooted">nextstrain.org</a>
+	</template>
+</section>
+
+<section style="text-align: left;">
+	<div style="float: left; width: 40%">
+		<h4>Rapid displacement of existing diversity by emerging variants</h4>
+	</div>
+	<div style="float: right; width: 55%">
+		<img data-src="/images/talks/ncov_tree_freq_2025_08_05.png">
+	</div>
+	<template class="slide-citation-left">
+		<a href="https://nextstrain.org/ncov/gisaid/global/all-time@2025-08-05">nextstrain.org</a>
+	</template>
+</section>
+
+<section>
+	<h3>Mutations in S1 subunit of spike protein driving displacement</h3>
+	<img class="stretch" data-src="/images/talks/ncov_mutation_rate_spike_clock_2025_08_05.png">
+	<template class="slide-citation">
+		<a href="https://nextstrain.org/ncov/gisaid/global/all-time@2025-08-05?branches=hide&l=scatter&scatterY=S1_mutations">nextstrain.org</a>
+	</template>
+</section>
+
+<section>
+	<h3>Calculate rates of adaptive evolution across the genomes of 28 endemic
+		human viruses spanning enveloped / non-enveloped and RNA / DNA viruses</h3>
+	<template class="slide-citation">
+		<img width=32 class="img-avatar" src="/images/team/katie-kistler.jpg">
+		<a href="https://bedford.io/papers/kistler-atlas-viral-evolution/">Kistler and Bedford. 2023. Cell Host Microbe.</a>
+	</template>
+</section>
+
+<section>
+	<h3>Calculate the rate of fixation relative to expectation from standing genetic diversity</h3>
+	<img class="stretch" data-src="/images/talks/adaptive_evolution_bhatt_method.png">
+	<template class="slide-citation">
+		<img width=32 class="img-avatar" src="/images/team/katie-kistler.jpg">
+		<a href="https://bedford.io/papers/kistler-atlas-viral-evolution/">Kistler and Bedford. 2023. Cell Host Microbe.</a>
+	</template>
+</section>
+
+<section>
+	<h3>A subset of viruses show adaptive evolution in their surface-located receptor-binding proteins</h3>
+	<img class="stretch" data-src="/images/talks/adaptive_evolution_genome_wide_comparison.png">
+	<template class="slide-citation">
+		<img width=32 class="img-avatar" src="/images/team/katie-kistler.jpg">
+		<a href="https://bedford.io/papers/kistler-atlas-viral-evolution/">Kistler and Bedford. 2023. Cell Host Microbe.</a>
+	</template>
+</section>
+
+<section>
+	<h3>Flu H3N2 is unusually fast, but flu B-like rates are not uncommon</h3>
+	<img class="stretch" data-src="/images/talks/adaptive_evolution_across_viruses_comparison.png">
+	<template class="slide-citation">
+		<img width=32 class="img-avatar" src="/images/team/katie-kistler.jpg">
+		<a href="https://bedford.io/papers/kistler-atlas-viral-evolution/">Kistler and Bedford. 2023. Cell Host Microbe.</a>
+	</template>
+</section>
+
+<section>
+	<h3>SARS-CoV-2 evolution fast relative to previous endemic viruses</h3>
+	<img class="stretch" data-src="/images/talks/adaptive_evolution_rates_comparison_2025_08_01.png">
+	<template class="slide-citation">
+		<img width=32 class="img-avatar" src="/images/team/katie-kistler.jpg">
+		Method from <a href="/papers/kistler-atlas-viral-evolution/">Kistler and Bedford. 2023. Cell Host Microbe.</a>
+	</template>
+</section>
+
+<section>
+	<h3>General correlation between mutational influx and adaptation</h3>
+	<p>SARS-CoV-2 is the clear outlier, rhinoviruses look similar to flu B</p>
+	<img class="stretch" data-src="/images/talks/adaptive_evolution_dS_dN_dA_comparison.png">
+	<template class="slide-citation">
+		<img width=32 class="img-avatar" src="/images/team/katie-kistler.jpg">
+		Kistler. 2025. Unpublished.
+	</template>
+</section>
+
+<section>
+	<h3>
+		SARS-CoV-2 and influenza H3N2 are challenging due to rate of evolution, while rhinoviruses are challenging due to diversity
+	</h3>
+	<img class="stretch" data-src="/images/talks/adaptive_evolution_lineage_count_dN_comparison.png">
+	<template class="slide-citation">
+		<img width=32 class="img-avatar" src="/images/team/katie-kistler.jpg">
+		Kistler. 2025. Unpublished.
+	</template>
+</section>
+
+<section class="left-align">
+	<h3>Core challenges of</h3>
+	<ol>
+		<li>Keeping up with evolution with yearly strain selection</li>
+		<li>Dealing with original antigenic sin in rapidly evolving viruses</li>
+	</ol>
+</section>
+
+<section style="text-align: left;">
+	<h3>Acknowledgements</h3>
+
+	<p class="tiny">
+		<b>Adaptive evolution across human endemic viruses</b>: Katie Kistler
+	</p>
+
+	<p class="tiny"><b>Bedford Lab</b>:
+		<span class="nobreak"><img width=38 class="img-avatar" data-src="/images/team/john-huddleston.jpg"> John Huddleston,</span> &hairsp;
+		<span class="nobreak"><img width=38 class="img-avatar" data-src="/images/team/james-hadfield.jpg"> James Hadfield,</span> &hairsp;
+		<span class="nobreak"><img width=38 class="img-avatar" data-src="/images/team/katie-kistler.jpg"> Katie Kistler,</span> &hairsp;
+		<span class="nobreak"><img width=38 class="img-avatar" data-src="/images/team/thomas-sibley.jpg"> Thomas Sibley,</span> &hairsp;
+		<span class="nobreak"><img width=38 class="img-avatar" data-src="/images/team/jover-lee.jpg"> Jover Lee,</span> &hairsp;
+		<span class="nobreak"><img width=38 class="img-avatar" data-src="/images/team/marlin-figgins.jpg"> Marlin Figgins,</span> &hairsp;
+		<span class="nobreak"><img width=38 class="img-avatar" data-src="/images/team/victor-lin.jpg"> Victor Lin,</span> &hairsp;
+		<span class="nobreak"><img width=38 class="img-avatar" data-src="/images/team/jennifer-chang.jpg"> Jennifer Chang,</span> &hairsp;
+		<span class="nobreak"><img width=38 class="img-avatar" data-src="/images/team/nashwa-ahmed.jpg"> Nashwa Ahmed,</span> &hairsp;
+		<span class="nobreak"><img width=38 class="img-avatar" data-src="/images/team/cecile-tran-kiem.jpg"> Cécile Tran Kiem,</span> &hairsp;
+		<span class="nobreak"><img width=38 class="img-avatar" data-src="/images/team/kim-andrews.jpg"> Kim Andrews,</span> &hairsp;
+		<span class="nobreak"><img width=38 class="img-avatar" data-src="/images/team/philippa-steinberg.jpg"> Philippa Steinberg,</span> &hairsp;
+		<span class="nobreak"><img width=38 class="img-avatar" data-src="/images/team/jacob-dodds.jpg"> Jacob Dodds,</span> &hairsp;
+		<span class="nobreak"><img width=38 class="img-avatar" data-src="/images/team/john-sj-anderson.jpg"> John SJ Anderson,</span> &hairsp;
+		<span class="nobreak"><img width=38 class="img-avatar" data-src="/images/team/nobuaki-masaki.jpg"> Nobuaki Masaki,</span> &hairsp;
+		<span class="nobreak"><img width=38 class="img-avatar" data-src="/images/team/amin-bemanian.jpg"> Amin Bemanian,</span> &hairsp;
+		<span class="nobreak"><img width=38 class="img-avatar" data-src="/images/team/carlos-avendano.jpg"> Carlos Avendano,</span> &hairsp;
+		<span class="nobreak"><img width=38 class="img-avatar" data-src="/images/team/aayush-verma.jpg"> Aayush Verma,</span> &hairsp;
+		<span class="nobreak"><img width=38 class="img-avatar" data-src="/images/team/lucy-obrien.jpg"> Lucy O'Brien</span>
+	</p>
+
+	<div width="100%" style="display: flex; justify-content: space-between; align-items: center;">
+		<img width="10%" data-src="/images/talks/logo_fred_hutch_vertical_v2.png">
+		<img width="7%" data-src="/images/talks/logo_nih.jpg">
+		<img width="15%" data-src="/images/talks/logo_bmgf.png">
+		<img width="8%" data-src="/images/talks/logo_cdc.png">
+		<img width="8%" data-src="/images/talks/logo_hhmi.jpg">
+	</div>
+
+</section>
