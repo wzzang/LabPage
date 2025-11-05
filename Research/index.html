@@ -1,0 +1,228 @@
+---
+layout: default
+title: Imaging of Brain Health Lab - Research
+permalink: /research/
+nav: true
+order: 3
+---
+
+
+<div class="row">
+  <div class="col-lg-12">
+	<div class="limited-width">
+		<p style="margin-bottom: 0.3em;">
+  <span style="font-size: 1.2em; font-weight: 600;">Our work</span> focuses on the intersection of brain health and mental health. 
+  Integrating insights from neuroscience, psychology, genetics, endocrinology, and data science, we take a multidisciplinary approach to understanding how individuals learn, adapt, and thrive.
+  </p>
+  <p>
+    The ultimate goal of our research is to uncover mechanisms that may inform interventions to strengthen brain health and mental resilience in both typical and vulnerable populations.
+  </p>
+		
+	</div>
+  </div>
+</div>
+
+<div class="bigspacer"></div>
+<div class="bigspacer"></div>
+<div class="bigspacer"></div>
+<div class="bigspacer"></div>
+<div style="max-width: 900px; margin: 0 auto;">
+    <h2 style="font-style: italic;">Ongoing Projects</h2>
+    <hr>
+</div>
+<div class="bigspacer"></div>
+<div class="bigspacer"></div>
+
+<!-- First Project -->
+<div class="bigspacer"></div>
+<div class="project-box">
+  <div class="project-image">
+    <img src="/images/Projects/dbsi_image.png" alt="DBSI">
+  </div>
+    <div class="project-text">
+      <h3>Neuroinflammation and Anhedonia</h3>
+      <p>
+        Anhedonia is a core symptom of many psychiatric disorders, marked by reduced pleasure and motivation. It's associated with poor treatment outcomes and significant healthcare costs. Our research investigates the connection between inflammation and anhedonia, a link that is not yet fully understood. 
+
+      </p>
+      <p><a href="#" class="details-toggle">Learn More →</a></p>
+      <div class="project-details">
+        <!-- <h4>Methodology</h4> -->
+        <p>
+          Using advanced brain imaging techniques and data from the UK Biobank and ABCD (Adolescent Brain Cognitive Development) studies, we will examine if neuroinflammation (inflammation in the brain) plays a role in the link between peripheral inflammation and anhedonia symptoms. We will also explore how this relationship may change with age.  
+          By focusing on key brain regions involved in reward processing, our goal is to provide new insights into the neural mechanisms of anhedonia, identify age-specific patterns, and contribute to the growing body of research on anhedonia as a transdiagnostic symptom. Future work will expand on this research by investigating how anhedonia and other motivation deficits are linked to (neuro)inflammation across patient populations with different disorders.
+
+        </p>
+        <h4>Funding</h4>
+        <p>This work is supported by NIH Grant <i>R03 MH138838</i>.</p>
+      </div>  
+    </div>
+</div>
+
+
+<!-- Second Project -->
+<div class="bigspacer"></div>
+<div class="bigspacer"></div>
+<div class="bigspacer"></div>
+<div class="project-box reverse">
+  <div class="project-image">
+    <img src="/images/Projects/dynamical_image.png" alt="Me & Myself">
+  </div>
+  <div class="project-text">
+    <h3>Brain Dynamics and Stress Response</h3>
+    <p>
+      We are launching a new project to investigate the neurobiological basis of individual differences in stress resilience. Using a dynamical systems framework, we will model the brain as a landscape of stable states, with stress acting as a perturbation. Leveraging neuroimaging data and advanced computational modeling, we will map recovery trajectories at the brain network level.
+    </p>
+    <p><a href="#" class="details-toggle">Learn More →</a></p>
+    <div class="project-details">
+      <!-- <h4>Methodology</h4> -->
+      <p>
+        We will use a within-subjects design with two fMRI time points (one before and one after stress induction), coupled with longitudinal behavioral data on the development of stress-related symptoms. 
+        Dynamic functional connectivity, along with network controllability and control energy, will be assessed to quantify the stability of brain dynamics and the energetic cost of shifting from pre- to post-stress states. 
+        We hypothesize that lower controllability and higher control energy will predict more severe and persistent PTSD symptoms over time.
+
+      </p>
+      <h4>Funding</h4>
+      <p>Grant proposal under development.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Third Project -->
+<div class="bigspacer"></div>
+<div class="bigspacer"></div>
+<div class="bigspacer"></div>
+<div class="project-box">
+  <div class="project-image">
+    <img src="/images/Projects/interplay.png" alt="Me & Myself">
+  </div>
+  <div class="project-text">
+    <h3>Metabolism and Inflammation in Mental Health</h3>
+    <p>
+      Emerging research highlights a bi-directional link between brain metabolism and inflammation in stress-related disorders, such as depression and PTSD. Chronic inflammation can impair brain energy use, while metabolic inefficiency may, in turn, intensify inflammation, yielding a vicious cycle of dysfunction. Currently, we are developing a new project that uses a multi-modal neuroimaging approach to examine this interplay. 
+
+    </p>
+    <p><a href="#" class="details-toggle">Learn More →</a></p>
+    <div class="project-details">
+      <!-- <h4>Methodology</h4> -->
+      <p>
+        We will estimate the brain’s energetic demands for state transitions from fMRI data and validate these estimates against MRS measures of key metabolites. We will also link these findings to diffusion MRI-based markers of neuroinflammation to model individual differences in stress resilience.
+
+      </p>
+      <h4>Funding</h4>
+      <p>Grant proposal under development.</p>
+    </div>
+  </div>
+</div>
+
+
+
+<style>
+  .project-box {
+    display: flex;             /* Activates Flexbox layout */
+    align-items: stretch;       /* Stretches columns to equal height */
+    gap: 2em;                  /* Creates space between the columns */
+    max-width: 900px;  /* Sets the maximum width of the box */
+    margin: 0 auto;   /* This is the trick to center the box itself */
+    margin-bottom: 3em;        /* Adds space between project boxes */
+  }
+
+  /* This is the modifier class to reverse the order */
+  .project-box.reverse {
+    flex-direction: row-reverse;
+  }
+
+  /* Defines the columns to be of equal width */
+  .project-image{
+    display: flex; /* This allows the child image to correctly fill the height */
+    justify-content: center; /* Centers horizontally in the column */
+    align-items: center;     /* Centers vertically in the column */
+  }
+  .project-text {
+    flex: 1; /* Each column takes up 50% of the space */
+    /* Uncomment the code below to align texts to the middle */
+    /* display: flex;             
+    flex-direction: column;    
+    justify-content: center;    */
+  }
+  .project-text p {
+  text-align: justify;
+  }
+
+  /* Ensures images don't overflow their container */
+  .project-image img {
+    max-width: 330px;
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px; /* Adds nice rounded corners to images */
+  }
+
+  /* Style for the hidden details container */
+  .project-details {
+    max-height: 0; /* Hidden by default */
+    overflow: hidden;
+    transition: max-height 0.5s ease-out; /* Smooth slide animation */
+    margin-top: 1em;
+  }
+
+  /* Style for when the container is shown */
+  .project-details.show {
+    max-height: 500px; /* Animate to this height. Adjust if you have a lot of content */
+  }
+
+  /* Adjustment for phone/pad viewing */
+  @media (max-width: 768px) {
+  .project-box,
+  .project-box.reverse {
+    flex-direction: column;  /* Stack image above text */
+    align-items: center;     /* Center content horizontally */
+  }
+
+  .project-image img {
+    max-width: 100%;         /* Let image fill the width */
+    width: auto;
+    height: auto;
+  }
+
+  .project-text {
+    width: 100%;
+    text-align: left;        /* Optional: left-align text on mobile */
+  }
+}
+
+</style>
+
+
+
+<script>
+  // Find all the "Learn more" links
+  const toggleLinks = document.querySelectorAll('.details-toggle');
+
+  // Add a click event listener to each link
+  toggleLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+      // Prevent the link from jumping to the top of the page
+      event.preventDefault();
+
+      // --- THIS IS THE CORRECTED LOGIC ---
+      // 1. Go up to the parent '.project-text' container...
+      const parentBox = this.closest('.project-text');
+      // 2. ...and find the '.project-details' div within it.
+      const detailsDiv = parentBox.querySelector('.project-details');
+      // ------------------------------------
+
+      // Toggle the 'show' class to make it visible or hidden
+      if (detailsDiv) { // Check if we found the div before trying to use it
+        detailsDiv.classList.toggle('show');
+
+        // (Optional) Change the link text
+        if (detailsDiv.classList.contains('show')) {
+          this.textContent = 'Show less ←';
+        } else {
+          this.textContent = 'Learn more →';
+        }
+      }
+    });
+  });
+</script>
