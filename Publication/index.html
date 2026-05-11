@@ -1,0 +1,26 @@
+---
+layout: default
+title: Imaging of Brain Health Lab - Publication
+permalink: /publications/
+nav: true
+order: 3
+---
+
+{% assign years = site.publications | map: 'year' | uniq | sort: 'reverse' %}
+
+{% for year in years %}
+  <h1>{{ year }}</h1>
+  <ul>
+    {% for paper in site.publications %}
+      {% if paper.year == year %}
+        <li>
+          {% if paper.url %}
+            <a href="{{ paper.url }}" target="_blank" rel="noopener noreferrer">{{ paper.title }}</a>
+          {% else %}
+            {{ paper.title }}
+          {% endif %}
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endfor %}

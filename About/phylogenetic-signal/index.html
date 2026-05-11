@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Bayesian estimation of phylogenetic signal</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	
+	<!-- Customized Bootstrap + Font Awesome + Solarized -->
+	<link href="/css/style.css" rel="stylesheet" media="screen">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/images/Logos/lab_header_logo.png" sizes="16x16" type="image/png">
+
+	<!-- Typekit -->
+	<script>
+	  (function(d) {
+		var config = {
+		  kitId: 'xeu8jut',
+		  scriptTimeout: 3000
+		},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	  })(document);
+	</script>
+
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-26244371-2', 'bedford.io');
+		ga('send', 'pageview');
+
+	</script>
+
+	<!-- jQuery -->
+	<script src="/js/jquery.min.js"></script>
+
+	<!-- Bootstrap -->
+	<script src="/js/bootstrap.min.js"></script>
+
+	<!-- FONT -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+	<div id="header">
+		<nav class="navbar navbar-expand-md navbar-light">
+			<div class="container">
+				
+				<a class="navbar-brand" href="/">
+					<img class="logo navbar-brand d-inline-block ml-0 mr-1" src="/images/Logos/lab_header_logo.png">
+					IBH Lab
+				</a>
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav nav-pills ml-auto">
+						
+						<li class="nav-link active">
+						
+						<a class="mx-1" href="/About/">About</a>
+						</li>
+						
+						<li class="nav-link">
+						
+						<a class="mx-1" href="/team/">Team</a>
+						</li>
+						
+						<li class="nav-link">
+						
+						<a class="mx-1" href="/research/">Research</a></li>
+						<!-- 
+						<li class="nav-link">
+						
+						<a class="mx-1" href="/Publication/">Publication</a></li> -->
+						
+						<li class="nav-link">
+						
+						<a class="mx-1" href="/join us/">Join Us!</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<div class="container" style="margin-top: 7rem;">
+
+	<div class="blog-post">
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-10">
+			<div class="media">
+				<div class="media-body">
+					<div class="title media-heading">
+						<a href="/about/phylogenetic-signal/" class="off">Bayesian estimation of phylogenetic signal</a>
+					</div>
+					<p>
+					<div class="smallhead">
+						27 Oct 2014
+						
+						by <a class="off" href="
+							
+						">
+						Trevor Bedford
+						</a>
+						
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-1"></div>
+	</div>
+
+	<div class="bigspacer"></div>
+
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-10">
+			
+			
+			<a href="/papers/vrancken-phylogenetic-signal/">
+				<img class="offset" src="/images/blog/phylogenetic_signal.png">
+			</a>
+			
+			
+			<div class="post">
+				<p>We’ve just had a paper published in <a href="http://onlinelibrary.wiley.com/doi/10.1111/2041-210X.12293/abstract">Methods in Ecology and Evolution</a> on <a href="/papers/vrancken-phylogenetic-signal/">“Simultaneously estimating evolutionary history and repeated traits phylogenetic signal”</a>.  This work, lead by <a href="https://rega.kuleuven.be/cev/ecv/lab-members/BramVrancken.html">Bram Vrancken</a>, <a href="https://rega.kuleuven.be/cev/ecv/lab-members/PhilippeLemey.html">Philippe Lemey</a> and <a href="http://faculty.biomath.ucla.edu/msuchard/">Marc Suchard</a>, estimates <em>phylogenetic signal</em> in a fully Bayesian fashion, integrating over uncertainty in evolutionary history.  This method provides an estimate of the extent to which variance of a continuous trait (like viral load) can be explained by evolutionary relatedness and thus gives an estimate of the trait’s <a href="http://en.wikipedia.org/wiki/Heritability">heritability</a>.</p>
+
+<p>Of particular interest to me, is that this method gives a heritability estimate of <a href="/blog/influenza-antigenic-dynamics/">influenza antigenic phenotype</a> of ~0.73, which it quite high and supports a strong genetic basis to antigenic phenotype.  Here, total variance in a phenotype trait stems from a combination of variance due to genotype and variance due to the environment <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>P</mi></msub><mo>=</mo><msub><mi>V</mi><mi>G</mi></msub><mo>+</mo><msub><mi>V</mi><mi>E</mi></msub></mrow><annotation encoding="application/x-tex">V_P = V_G + V_E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">G</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05764em;">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, so that heritability is measured as the proportion of the total variance explained by genotype <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>H</mi><mn>2</mn></msup><mo>=</mo><msub><mi>V</mi><mi>G</mi></msub><mi mathvariant="normal">/</mi><msub><mi>V</mi><mi>P</mi></msub></mrow><annotation encoding="application/x-tex">H^2 = V_G / V_P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">G</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>.  In the case of influenza antigenic phenotype we expect noise in the <a href="http://en.wikipedia.org/wiki/Hemagglutination_assay">hemagglutination inhibition (HI) assay</a> to contribute to total variance, so <em>H</em>^2 = ~0.73 should represent a lower bound to actual heritability.</p>
+
+			</div>
+		</div>
+		<div class="col-lg-1"></div>
+	</div>
+
+	<div class="bigspacer"></div>
+	<div class="spacer"></div>
+
+</div>
+
+
+	</div>
+
+	<div id="footer"><span style="display:none">foo</span></div>
+
+</body>
+</html>

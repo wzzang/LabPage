@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Postdoc in applying sequence language models to understand and forecast evolution</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	
+	<!-- Customized Bootstrap + Font Awesome + Solarized -->
+	<link href="/css/style.css" rel="stylesheet" media="screen">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/images/Logos/lab_header_logo.png" sizes="16x16" type="image/png">
+
+	<!-- Typekit -->
+	<script>
+	  (function(d) {
+		var config = {
+		  kitId: 'xeu8jut',
+		  scriptTimeout: 3000
+		},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	  })(document);
+	</script>
+
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-26244371-2', 'bedford.io');
+		ga('send', 'pageview');
+
+	</script>
+
+	<!-- jQuery -->
+	<script src="/js/jquery.min.js"></script>
+
+	<!-- Bootstrap -->
+	<script src="/js/bootstrap.min.js"></script>
+
+	<!-- FONT -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+	<div id="header">
+		<nav class="navbar navbar-expand-md navbar-light">
+			<div class="container">
+				
+				<a class="navbar-brand" href="/">
+					<img class="logo navbar-brand d-inline-block ml-0 mr-1" src="/images/Logos/lab_header_logo.png">
+					IBH Lab
+				</a>
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav nav-pills ml-auto">
+						
+						<li class="nav-link active">
+						
+						<a class="mx-1" href="/About/">About</a>
+						</li>
+						
+						<li class="nav-link">
+						
+						<a class="mx-1" href="/team/">Team</a>
+						</li>
+						
+						<li class="nav-link">
+						
+						<a class="mx-1" href="/research/">Research</a></li>
+						<!-- 
+						<li class="nav-link">
+						
+						<a class="mx-1" href="/Publication/">Publication</a></li> -->
+						
+						<li class="nav-link">
+						
+						<a class="mx-1" href="/join us/">Join Us!</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<div class="container" style="margin-top: 7rem;">
+
+	<div class="blog-post">
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-10">
+			<div class="media">
+				<div class="media-body">
+					<div class="title media-heading">
+						<a href="/about/postdoc-sequence-language-models/" class="off">Postdoc in applying sequence language models to understand and forecast evolution</a>
+					</div>
+					<p>
+					<div class="smallhead">
+						10 Apr 2025
+						
+						by <a class="off" href="
+							
+						">
+						Trevor Bedford
+						</a>
+						
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-1"></div>
+	</div>
+
+	<div class="bigspacer"></div>
+
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-10">
+			
+			<div class="post">
+				<p>We have an opening for a postdoc in the Bedford Lab at the Fred Hutch Cancer Center to work on developing and applying DNA and protein language models to understand and forecast viral evolution.</p>
+
+<p>The Bedford Lab has worked extensively in the field of viral evolutionary forecasting.
+In this context, we’ve developed models to estimate fitness of seasonal influenza variants from genetic sequence data and to then use fitness estimates to forecast variant frequencies (<a href="/papers/huddleston-flu-forecasting/">Huddleston et al., eLife, 2020</a>).
+We’ve taken a similar approach to forecasting SARS-CoV-2 variants in applying multinomial logistic regression (MLR) to estimate variant fitness and to project frequencies forward in time (<a href="/papers/abousamra-ncov-forecasting-fit/">Abousamra et al., PLoS Comput Biol, 2024</a>).
+This approach underlies our live SARS-CoV-2 evolutionary forecasts at <a href="https://nextstrain.org/sars-cov-2/forecasts">nextstrain.org/sars-cov-2/forecasts</a>.
+Our influenza forecasts are directly utilized by the World Health Organization in the <a href="https://www.who.int/initiatives/global-influenza-surveillance-and-response-system">twice yearly vaccine strain selection meetings</a> for seasonal influenza.</p>
+
+<p>Recent advances in deep learning, especially transformer-based language models for protein sequences (see <a href="https://www.science.org/doi/10.1126/science.ads0018">ESM3</a>) and DNA sequences (see <a href="https://www.biorxiv.org/content/10.1101/2025.02.18.638918v1">Evo2</a>), present exciting new avenues to enhance evolutionary predictions.
+These models, trained to predict residues or nucleotides based on sequence context, have potential to significantly improve predictions of variant fitness and evolution.</p>
+
+<p>In this role, you’ll initially focus on incorporating state-of-the-art language models to assess and predict the fitness of influenza and SARS-CoV-2 variants, comparing these predictions to our established statistical models.
+A key aim is to leverage these advanced models to provide deeper insights than traditional “mutational load” metrics, which simply count the number of amino acid changes.
+Additionally, you will explore how embedding spaces derived from these language models could offer new perspectives on evolutionary processes (see <a href="https://www.science.org/doi/10.1126/science.abd7331">Hie et al</a> for an example of looking at semantic change via embedding).
+Beyond applying existing language model frameworks, you’ll have opportunities to design novel model architectures to describe the process of sequence evolution.</p>
+
+<p>The ideal candidate will have experience working with deep learning models via PyTorch or other frameworks.
+However, candidates with more traditional experience in sequence data and phylogenetic approaches who are excited to dive into deep learning models are also strongly encouraged to apply.
+Candidates should have experience in at least one programming language and a proven track-record of peer reviewed publications.
+A quantitative background is essential, though PhDs from diverse fields including biology, mathematics, statistics, physics and computer science are welcome.
+The Fred Hutch is an equal opportunity employer committed to workforce diversity.
+Applicants of diverse backgrounds are particularly encouraged to apply.</p>
+
+<p>The position is available immediately with flexible starting dates.
+Informal inquires are welcome.
+Applications will be accepted until the position is filled.
+Fred Hutch offers competitive compensation and benefits packages.</p>
+
+<p>To apply please submit</p>
+<ol>
+  <li>cover letter that includes the names and contacts for three references and a short statement of research interests</li>
+  <li>a current CV</li>
+  <li>code samples or links to code on GitHub</li>
+</ol>
+
+<p>Send application materials or inquiries to tb<span style="display:none">obfuscate</span>@bedford.io.</p>
+
+<p><em>This is a general area of interest for the lab. If you’re interested in deep learning for biological sequence data and are not at the postdoc career stage, please still get in touch.</em></p>
+
+			</div>
+		</div>
+		<div class="col-lg-1"></div>
+	</div>
+
+	<div class="bigspacer"></div>
+	<div class="spacer"></div>
+
+</div>
+
+
+	</div>
+
+	<div id="footer"><span style="display:none">foo</span></div>
+
+</body>
+</html>

@@ -6,14 +6,12 @@
 	<title>{{ page.title }}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- RSS feed -->
-	<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
-
-  <!-- Customized Bootstrap + Font Awesome + Solarized -->
-  <link href="/css/style.css" rel="stylesheet" media="screen">
+	
+	<!-- Customized Bootstrap + Font Awesome + Solarized -->
+	<link href="/css/style.css" rel="stylesheet" media="screen">
 
 	<!-- Favicon -->
-	<link rel="shortcut icon" href="/images/favicon.png"/>
+	<link rel="shortcut icon" href="/images/Logos/lab_header_logo.png" sizes="16x16" type="image/png">
 
 	<!-- Typekit -->
 	<script>
@@ -44,17 +42,21 @@
 	<!-- Bootstrap -->
 	<script src="/js/bootstrap.min.js"></script>
 
+	<!-- FONT -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 	<div id="header">
-		<nav class="navbar navbar-expand-md navbar-light bg-navbar">
+		<nav class="navbar navbar-expand-md navbar-light">
 			<div class="container">
 				{% if page.categories.first != 'home' %}
 				<a class="navbar-brand" href="/">
-					<img class="logo navbar-brand d-inline-block align-top ml-0 mr-1" src="/images/logo.svg">
-					bedford lab
+					<img class="logo navbar-brand d-inline-block ml-0 mr-1" src="/images/Logos/lab_header_logo.png">
+					IBH Lab
 				</a>
 				{% else %}
 				<a class="navbar-brand" href="/">
@@ -65,39 +67,45 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<ul class="navbar-nav nav-pills ml-auto">
-						{% if page.categories.first == 'blog' %}
+						{% if page.categories.first == 'About' %}
 						<li class="nav-link active">
 						{% else %}
 						<li class="nav-link">
 						{% endif %}
-						<a class="mx-1" href="/blog/">blog</a>
+						<a class="mx-1" href="/About/">About</a>
 						</li>
-						{% if page.categories.first == 'papers' %}
+						{% if page.categories.first == 'Team' %}
 						<li class="nav-link active">
 						{% else %}
 						<li class="nav-link">
 						{% endif %}
-						<a class="mx-1" href="/papers/">papers</a>
+						<a class="mx-1" href="/team/">Team</a>
 						</li>
-						{% if page.categories.first == 'projects' %}
+						{% if page.categories.first == 'Research' %}
 						<li class="nav-link active">
 						{% else %}
 						<li class="nav-link">
 						{% endif %}
-						<a class="mx-1" href="/projects/">projects</a></li>
-						{% if page.categories.first == 'team' %}
+						<a class="mx-1" href="/research/">Research</a></li>
+						<!-- {% if page.categories.first == 'Publication' %}
 						<li class="nav-link active">
 						{% else %}
 						<li class="nav-link">
 						{% endif %}
-						<a class="mx-1" href="/team/">team</a></li>
+						<a class="mx-1" href="/Publication/">Publication</a></li> -->
+						{% if page.categories.first == 'Join Us!' %}
+						<li class="nav-link active">
+						{% else %}
+						<li class="nav-link">
+						{% endif %}
+						<a class="mx-1" href="/join us/">Join Us!</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 	</div>
 
-	<div class="container mt-4">
+	<div class="container" style="margin-top: 7rem;">
 
 	{{ content }}
 

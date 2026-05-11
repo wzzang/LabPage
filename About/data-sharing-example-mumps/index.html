@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>A concrete example of the value of data sharing</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	
+	<!-- Customized Bootstrap + Font Awesome + Solarized -->
+	<link href="/css/style.css" rel="stylesheet" media="screen">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/images/Logos/lab_header_logo.png" sizes="16x16" type="image/png">
+
+	<!-- Typekit -->
+	<script>
+	  (function(d) {
+		var config = {
+		  kitId: 'xeu8jut',
+		  scriptTimeout: 3000
+		},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	  })(document);
+	</script>
+
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-26244371-2', 'bedford.io');
+		ga('send', 'pageview');
+
+	</script>
+
+	<!-- jQuery -->
+	<script src="/js/jquery.min.js"></script>
+
+	<!-- Bootstrap -->
+	<script src="/js/bootstrap.min.js"></script>
+
+	<!-- FONT -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+	<div id="header">
+		<nav class="navbar navbar-expand-md navbar-light">
+			<div class="container">
+				
+				<a class="navbar-brand" href="/">
+					<img class="logo navbar-brand d-inline-block ml-0 mr-1" src="/images/Logos/lab_header_logo.png">
+					IBH Lab
+				</a>
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav nav-pills ml-auto">
+						
+						<li class="nav-link active">
+						
+						<a class="mx-1" href="/About/">About</a>
+						</li>
+						
+						<li class="nav-link">
+						
+						<a class="mx-1" href="/team/">Team</a>
+						</li>
+						
+						<li class="nav-link">
+						
+						<a class="mx-1" href="/research/">Research</a></li>
+						<!-- 
+						<li class="nav-link">
+						
+						<a class="mx-1" href="/Publication/">Publication</a></li> -->
+						
+						<li class="nav-link">
+						
+						<a class="mx-1" href="/join us/">Join Us!</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<div class="container" style="margin-top: 7rem;">
+
+	<div class="blog-post">
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-10">
+			<div class="media">
+				<div class="media-body">
+					<div class="title media-heading">
+						<a href="/about/data-sharing-example-mumps/" class="off">A concrete example of the value of data sharing</a>
+					</div>
+					<p>
+					<div class="smallhead">
+						11 Dec 2018
+						
+						by <a class="off" href="
+							
+						">
+						Allison Black
+						</a>
+						
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-1"></div>
+	</div>
+
+	<div class="bigspacer"></div>
+
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-10">
+			
+			
+			<img class="offset" src="/images/blog/mumps_ontario_genomes.png">
+			
+			
+			<div class="post">
+				<p>If you are reading this blog, you are probably already onboard with releasing data openly as it’s generated. You may even have led the charge in getting other researchers and/or journals to be more open with protocols, data, and analyses. You probably don’t <em>need</em> a reminder of why open data sharing is awesome, but sometimes it’s nice to take stock and remember that what we’re pushing for has real tangible value.</p>
+
+<p><a href="/team/louise-moncla/">Louise</a> has been investigating the genomic epidemiology of the mumps outbreak in Washington, and I’ve been helping out a bit too. If you want some big picture details about the project, you can read more about it <a href="/blog/mumps-in-washington-state/">here</a> and <a href="/blog/mumps-update/">here</a>. As part of this project, Louise been managing <a href="https://nextstrain.org/mumps/na">Nextstrain Mumps</a>. Recently, Patrick Stapleton from Public Health Ontario shared his sequences with us (thank you!!). Louise rebuilt Nextstrain with them, and we were totally struck by how much context the Ontario viruses provided for <a href="https://nextstrain.org/mumps/na?s=Washington.USA/2017321/17.17/3/G">one of our “one-off” Washingtonian sequences</a>.</p>
+
+<p>Take a look at the image with the before and after. Before, we see that we have a couple of viruses that don’t nest within the primary Washington outbreak clade. They are most closely related to Canadian viruses (Manitoba, BC), but those branches are pretty long, an indicator that there’s unsampled transmission occurring. This crops up not infrequently in sparse datasets, but I still always find myself wanting to know where this transmission chain was circulating before it pops up on our radar. Importantly, this isn’t just about my curiosity; knowing where importations come from, and their frequency, is important for tailoring surveillance efforts and designing or evaluating infection control measures.</p>
+
+<p>Here we get lucky on two counts: 1) other people are sequencing mumps, and 2) they like sharing data! With the Ontario viruses included in the tree, we see that Washington.USA/2017321 is a very clear introduction of mumps from Ontario into Washington. Given the high genetic similarity between this Washington strain and the viruses from Ontario, it seems pretty likely that this was a direct introduction or perhaps a very recent introduction followed by a short transmission chain.</p>
+
+<p>This may seem trivial, but you can play through some different scenarios to show that it’s not. Before, we don’t really have any idea what is going on with Washington.USA/2017321. We might ask, does this strain represent a tiny chunk of a lot of transmission that is going unobserved? If so, do we need to ramp up surveillance in a particular population? With just a bit of context we realize that no, we don’t need to pour a whole bunch of resources into figuring out what’s going on here. We have a travel-associated introduction, and while it’s good to follow up on close contacts, we probably don’t need to take significant resources away from another cluster to look into this one.</p>
+
+<p>This is such a clear example of how much more value we can get out of genomic surveillance when we pool our data. Other people’s sequences provide context for our own. With this project, we’ve been incredibly fortunate to have lots of people sharing sequences with us. Many thanks to Jenn Gardy and Jeff Joy in British Columbia, Shirlee Wohl in Massachusetts, and Patrick Stapleton in Ontario. And of course thank you to all the authors who have put sequences up openly on GenBank. The mumps phylogeny would look ridiculous without you.</p>
+
+			</div>
+		</div>
+		<div class="col-lg-1"></div>
+	</div>
+
+	<div class="bigspacer"></div>
+	<div class="spacer"></div>
+
+</div>
+
+
+	</div>
+
+	<div id="footer"><span style="display:none">foo</span></div>
+
+</body>
+</html>

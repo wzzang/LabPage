@@ -10,3 +10,16 @@ $fa-font-path: "webfonts";
 @import "font-awesome/brands";
 @import "katex";
 @import "solarized";
+
+.highlight-bold {
+  font-weight: bold;
+}
+
+.limited-width {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.limited-width p {
+  text-align: justify;
+}

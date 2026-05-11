@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Estimating global flu diversity</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	
+	<!-- Customized Bootstrap + Font Awesome + Solarized -->
+	<link href="/css/style.css" rel="stylesheet" media="screen">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/images/Logos/lab_header_logo.png" sizes="16x16" type="image/png">
+
+	<!-- Typekit -->
+	<script>
+	  (function(d) {
+		var config = {
+		  kitId: 'xeu8jut',
+		  scriptTimeout: 3000
+		},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	  })(document);
+	</script>
+
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-26244371-2', 'bedford.io');
+		ga('send', 'pageview');
+
+	</script>
+
+	<!-- jQuery -->
+	<script src="/js/jquery.min.js"></script>
+
+	<!-- Bootstrap -->
+	<script src="/js/bootstrap.min.js"></script>
+
+	<!-- FONT -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+	<div id="header">
+		<nav class="navbar navbar-expand-md navbar-light">
+			<div class="container">
+				
+				<a class="navbar-brand" href="/">
+					<img class="logo navbar-brand d-inline-block ml-0 mr-1" src="/images/Logos/lab_header_logo.png">
+					IBH Lab
+				</a>
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav nav-pills ml-auto">
+						
+						<li class="nav-link active">
+						
+						<a class="mx-1" href="/About/">About</a>
+						</li>
+						
+						<li class="nav-link">
+						
+						<a class="mx-1" href="/team/">Team</a>
+						</li>
+						
+						<li class="nav-link">
+						
+						<a class="mx-1" href="/research/">Research</a></li>
+						<!-- 
+						<li class="nav-link">
+						
+						<a class="mx-1" href="/Publication/">Publication</a></li> -->
+						
+						<li class="nav-link">
+						
+						<a class="mx-1" href="/join us/">Join Us!</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<div class="container" style="margin-top: 7rem;">
+
+	<div class="blog-post">
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-10">
+			<div class="media">
+				<div class="media-body">
+					<div class="title media-heading">
+						<a href="/about/global-flu-diversity/" class="off">Estimating global flu diversity</a>
+					</div>
+					<p>
+					<div class="smallhead">
+						29 Jan 2012
+						
+						by <a class="off" href="
+							
+						">
+						Trevor Bedford
+						</a>
+						
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-1"></div>
+	</div>
+
+	<div class="bigspacer"></div>
+
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-10">
+			
+			
+			<img class="offset" src="/images/blog/flu_turnover.png">
+			
+			
+			<div class="post">
+				<p>How many strains of flu are circulating at any given moment?  And how much sampling is necessary to capture this diversity?  This came up in a conversation with <a href="http://tree.bio.ed.ac.uk/people/arambaut/">Andrew Rambaut</a> and <a href="http://www.erikvolz.info/">Erik Volz</a> last week.  Fortunately, we can get a back-of-the-envelope estimate using standard population genetic theory.  Here, I’ve downloaded all the amino acid sequences for the HA1 region of the H3N2 hemagglutinin protein that exist in Genbank between January 2002 and June 2009.  This figure is looking at 10 week windows, with each colored region representing the frequency of a particular sequence in that window’s sample.  You can see that there are a few common sequences and many rare sequences, and that sequence diversity rapidly changes over time.  The HA1 region is the region of the influenza genome most responsible for antigenic variation.  Evolution of HA1 is what allows the virus to infect people that have built up immunity to previous strains of flu.  Looking at amino acid diversity of HA1 will give an under-estimate of total genomic diversity of flu, but should be a decent proxy for functional diversity.</p>
+
+<p><img src="/images/blog/samples_vs_types.png" alt="" /></p>
+
+<p>We can use the <a href="http://en.wikipedia.org/wiki/Ewens's_sampling_formula">Ewen’s sampling formula</a> to calculate the probability that we observe <i>k</i> distinct sequences (or alleles) in a sample of <i>n</i> sequences.  In this case, the expected number of alleles in sample of <i>n</i> sequences is</p>
+<div style="text-align: center; margin-top: 0.5em; margin-bottom: 0.5em;"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mfrac><mi>θ</mi><mrow><mi>θ</mi><mo>+</mo><mi>i</mi><mo>−</mo><mn>1</mn></mrow></mfrac><mo separator="true">,</mo></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle \sum_{i=1}^n \frac{\theta}{\theta +i - 1},</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.929066em;vertical-align:-1.277669em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6513970000000002em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3000050000000005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.277669em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7693300000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mpunct">,</span></span></span></span></span></div>
+<p>where <i>θ</i> represents the level of mutational input into the population.  This formula assumes neutral demography, no geographic subdivision and an infinite alleles mutation model, where every mutation creates a new allele.  I fit this formula to the windows from Genbank comparing the number of sequences sampled each month to the number of distinct sequences observed.  Doing so, I get an estimate for <i>θ</i> of 28.8, shown in red.</p>
+
+<p>With this number in hand, it’s possible to estimate the number of distinct alleles that one would find in a very large sample.  We expect to find 104 alleles in a sample of 1000 sequences and 169 alleles in a sample of 10k sequences.  Estimated global prevalence of influenza is around 70 million (more during the northern hemisphere winter, but this should be good enough for our purposes).  A sample of 70 million sequences is expected to have 358 distinct sequences.  However, most of these are at very low frequency.  We would only expect to see around 30 alleles at greater than 1% frequency, 86 alleles present at &gt;0.1% frequency and 164 alleles present at &gt;0.01% frequency in the population.  I’m not sure exactly where to draw the line in terms of “important” variation, but I would think that 1 in 1000 is a good ballpark.  Thus, it seems to me that a sample of around 500 sequences (with an expected 84 unique alleles) would be sufficient to capture all the possibly important diversity in the HA1 protein.</p>
+
+
+			</div>
+		</div>
+		<div class="col-lg-1"></div>
+	</div>
+
+	<div class="bigspacer"></div>
+	<div class="spacer"></div>
+
+</div>
+
+
+	</div>
+
+	<div id="footer"><span style="display:none">foo</span></div>
+
+</body>
+</html>

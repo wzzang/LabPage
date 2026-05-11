@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Using Nextstrain narratives to explain WNV spread and evolution</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	
+	<!-- Customized Bootstrap + Font Awesome + Solarized -->
+	<link href="/css/style.css" rel="stylesheet" media="screen">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/images/Logos/lab_header_logo.png" sizes="16x16" type="image/png">
+
+	<!-- Typekit -->
+	<script>
+	  (function(d) {
+		var config = {
+		  kitId: 'xeu8jut',
+		  scriptTimeout: 3000
+		},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	  })(document);
+	</script>
+
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-26244371-2', 'bedford.io');
+		ga('send', 'pageview');
+
+	</script>
+
+	<!-- jQuery -->
+	<script src="/js/jquery.min.js"></script>
+
+	<!-- Bootstrap -->
+	<script src="/js/bootstrap.min.js"></script>
+
+	<!-- FONT -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+	<div id="header">
+		<nav class="navbar navbar-expand-md navbar-light">
+			<div class="container">
+				
+				<a class="navbar-brand" href="/">
+					<img class="logo navbar-brand d-inline-block ml-0 mr-1" src="/images/Logos/lab_header_logo.png">
+					IBH Lab
+				</a>
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav nav-pills ml-auto">
+						
+						<li class="nav-link active">
+						
+						<a class="mx-1" href="/About/">About</a>
+						</li>
+						
+						<li class="nav-link">
+						
+						<a class="mx-1" href="/team/">Team</a>
+						</li>
+						
+						<li class="nav-link">
+						
+						<a class="mx-1" href="/research/">Research</a></li>
+						<!-- 
+						<li class="nav-link">
+						
+						<a class="mx-1" href="/Publication/">Publication</a></li> -->
+						
+						<li class="nav-link">
+						
+						<a class="mx-1" href="/join us/">Join Us!</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<div class="container" style="margin-top: 7rem;">
+
+	<div class="blog-post">
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-10">
+			<div class="media">
+				<div class="media-body">
+					<div class="title media-heading">
+						<a href="/about/nextstrain-narratives-for-wnv/" class="off">Using Nextstrain narratives to explain WNV spread and evolution</a>
+					</div>
+					<p>
+					<div class="smallhead">
+						31 Oct 2019
+						
+						by <a class="off" href="
+							
+						">
+						James Hadfield
+						</a>
+						
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-1"></div>
+	</div>
+
+	<div class="bigspacer"></div>
+
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-10">
+			
+			<div class="post">
+				<p>Our paper out today <a href="/papers/hadfield-wnv-nextstrain/">summarises twenty years of West Nile virus spread and evolution in the Americas visualised by Nextstrain</a>, the result of a fantastic collaboration between multiple groups over the past couple of years.
+I wanted to give a bit of a backstory as to how we got here, how we’re using Nextstrain to tell stories, and where I see this kind of science going.</p>
+
+<p>I’m not going to use this space to rephrase the content of the paper — it’s not a technical paper and is (I hope) easy to read and understand.
+The paper summarises all the available genomic data of WNV in the Americas, reconstructs the spread of the disease (westwards across North America with recent jumps into Central &amp; South America), with each figure being a Nextstrain screenshot with a corresponding URL so that you can access an interactive, continually updated view of that same figure.</p>
+
+<p>Instead I’d like to focus on how we used Nextstrain, and in particular its new narrative functionality, to present data in an innovative and updatable way.
+But first, what’s Nextstrain and how did this collaboration start?</p>
+
+<h2 id="how-this-all-came-about">How this all came about</h2>
+
+<p>Nextstrain has been up and running for around three years and is “an open-source project to harness the scientific and public health potential of pathogen genome data”.
+Nextstrain uses reproducible bioinformatics tooling (“augur”) and an innovative interactive visualisation platform (“auspice”) to allow us to provide continually updated views into the phylogenomics of various pathogens, all available on <a href="https://nextstrain.org">nextstrain.org</a>.</p>
+
+<p><a href="https://medicine.yale.edu/profile/nathan_grubaugh/">Nate Grubaugh</a>, who had just moved from <a href="https://andersen-lab.com/">Kristian Andersen’s group</a> in San Diego to a P.I. position at Yale, was doing amazing work collecting, collaborating, and sequencing different arboviruses.
+Nate wanted to be able to continually share results from the WNV work, including the <a href="https://westnile4k.org/">WestNile4k project</a>, and Nextstrain provided the perfect tool for this — it’s fast, so analyses can be rerun whenever new data are available and the results are available for everyone to see and interact with online.
+Nate, his postdoc <a href="http://grubaughlab.com/team/anderson-brito/">Anderson Brito</a>, and myself set things up (all the steps to reproduce the analysis are on <a href="https://github.com/grubaughlab/WNV-nextstrain">GitHub</a>) and <a href="https://nextstrain.org/WNV/NA">nextstrain.org/WNV/NA</a> was born.</p>
+
+<p>The proof is in the pudding and as a result of sharing continually updated data through Nextstrain, Nate had new collaborators reach out to him. The data they contributed helped to fill in the geographic coverage and improve our understanding of this disease’s spread.</p>
+
+<h2 id="towards-a-new-interactive-storytelling-method-of-presenting-results">Towards a new, interactive storytelling method of presenting results</h2>
+
+<p>Inspired by interactive visualisations and storytelling — which caused me to take a left-turn during my PhD — I wanted to allow scientists to use Nextstrain to tell stories about the data they were making available.
+I’m a big believer in Nextstrain’s mission to provide interactive views into the data (I helped to build it after all), but understanding what the data is telling you often requires considerable expertise in phylogenomics.</p>
+
+<p>Nextstrain narratives allow short paragraphs of text to be “attached” to certain views of the data.
+By scrolling through the paragraphs you are presented with a story, allowing conveyance of the author’s interpretation and understanding of the data.
+At any time you can jump back to a “fully interactive” Nextstrain view &amp; interrogate the data yourself.</p>
+
+<p>So, the content of the paper we’ve just published is available as an interactive narrative at <a href="https://nextstrain.org/narratives/twenty-years-of-WNV">nextstrain.org/narratives/twenty-years-of-WNV</a>.
+I encourage you to go and read it (by scrolling through each paragraph), interact with the underlying data (click “Explore the data yourself” in the top-right corner), and compare this to the paper we’ve just published.</p>
+
+<p><img src="/images/blog/wnv_nextstrain_narrative.gif" alt="WNV Narrative demo" /></p>
+
+<p>We’re only beginning to scratch the surface of different ways to present scientific data &amp; findings — see <a href="http://worrydream.com">Brett Victor</a>’s talks for a glimpse into the future.
+In a separate collaboration, we’ve been using narratives to provide situation-reports for the ongoing Ebola outbreak in the DRC every time new samples are sequenced, helping to bridge the gap between genomicists and epidemiologists.
+If you’re interested in writing a narrative for your data (or any data available on Nextstrain) then see <a href="https://nextstrain.github.io/auspice/narratives/introduction">this section</a> of the auspice documentation.</p>
+
+<p>A big thanks to all the amazing people involved in this collaboration, especially Anderson &amp; Nate, as well as <a href="/team/trevor-bedford/">Trevor Bedford</a> &amp; <a href="http://colinmegill">Colin Megill</a> for help in designing the narratives interface.</p>
+
+			</div>
+		</div>
+		<div class="col-lg-1"></div>
+	</div>
+
+	<div class="bigspacer"></div>
+	<div class="spacer"></div>
+
+</div>
+
+
+	</div>
+
+	<div id="footer"><span style="display:none">foo</span></div>
+
+</body>
+</html>

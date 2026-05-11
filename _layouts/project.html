@@ -4,11 +4,13 @@ categories:
  - projects
 ---
 
-{% for test in site.data.projects %}
+<!-- {% for test in site.data.projects %}
 	{% if test.title == page.project %}
 		{% assign project = test %}
 	{% endif %}
-{% endfor %}
+{% endfor %} -->
+
+{% assign project = page %}
 
 <div class="row">
 	<div class="col-lg-12">

@@ -13,7 +13,7 @@ $pre-bg: #f8f8f8;
 $breadcrumb-bg: #ffffff;
 $breadcrumb-padding-x: 0.0rem;
 $breadcrumb-active-color: #000000;
-$navbar-brand-font-size: 30px;
+$navbar-brand-font-size: 23px;
 $navbar-brand-padding-y: 0.0rem;
 $navbar-light-color: $gray-light;
 $navbar-padding-y: 0.0rem;
@@ -84,6 +84,20 @@ h6 {
   margin-left : .1em;
 }
 
+body a {
+  color: #2e7419; /* darker Sprout green */
+//   font-style: italic; /* Adds italics for accessibility */
+//   text-decoration: underline;
+}
+body a:hover {
+  text-decoration: underline; /* Underline appears on hover */
+}
+/* This new rule resets any link inside the header to be non-italic */
+#header a {
+  font-style: normal;
+  text-decoration: none;
+}
+
 // also modify Bootstrap source in _reboot.scss
 b, strong {
   font-weight: bold;
@@ -111,15 +125,19 @@ b, strong {
 /* navbar */
 
 .navbar-brand {
-	font-size: 30px;
-	font-weight: 100;
-  color: $gray-light;
-	/* Museo */
+	// font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #1E4D2B; /* Dark Green */
+	font-style: normal; 
+	display: flex;          
+    align-items: center;    
 }
 .navbar-nav {
-	font-size: 30px;
-	font-weight: 100;
-	/* Museo */
+	font-size: 1.33rem;
+    font-weight: 400; /* Changed to a more standard weight */
+	font-style: normal; 
+    
 }
 .navbar-text {
 	font-size: 15px;
@@ -408,4 +426,13 @@ blockquote {
     -webkit-transform: scale(1.0);
     opacity: 0;
   }
+}
+
+
+.homepage-container {
+  margin-top: 3rem; /* Spacing for the homepage */
+}
+
+.page-container {
+  margin-top: 7rem; /* Spacing for all other pages */
 }
